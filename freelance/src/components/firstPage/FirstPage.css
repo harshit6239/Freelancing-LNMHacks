@@ -53,7 +53,7 @@
     width: 80%;
     height: 40%;
     border-radius: 25px;
-    box-shadow: -3px -3px 5px #fff, 3px 3px 5px rgba(94, 104, 121, 0.288);
+    box-shadow: -3px -3px 5px #fff, 3px 3px 5px #5e687949;
     margin: 5%;
     display: flex;
     justify-content: center;
