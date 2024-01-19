@@ -28,6 +28,7 @@ a:hover {
 body {
   background-image: url(/background.png);
   background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   margin: 0;
   place-items: center;

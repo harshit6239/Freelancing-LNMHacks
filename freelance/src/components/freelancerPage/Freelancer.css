@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 .page{
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     color: #000;
 }
 .logo{
@@ -23,6 +25,14 @@
     top: 0;
     right: 0;
 }
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
 .tagLine{
     margin-top: 10%;
     font-size: 60px;
@@ -30,19 +40,69 @@
 }
 .jobList{
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.job{
+    width: 80%;
+    height: 30%;
+    margin: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: -3px -3px 5px #fff, 3px 3px 5px rgba(94, 104, 121, 0.288);
+    background-color: #e4e5edb8;
+    cursor: pointer;
+    
+}
+.job:hover{
+    animation: colorChange 0.2s forwards;
+}
+.description{
+    margin-left: 2%;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
 }
+.price{
+    margin-right: 2%;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.jobTitle{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 1%;
+    text-transform: capitalize;
+}
+.jobDescription{
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.jobPrice{
+    font-size: 40px;
+    font-weight: 700;
+}
 @keyframes colorChange{
     0%{
-        background-color: black;
-        color: #e4e5ed;
+        background-color: #e4e5edb8;
+        color: black;
     }
     100%{
-        background-color: #e4e5ed;
-        color: black;
+        background-color: black;
+        color: #e4e5ed;
     }
 }
