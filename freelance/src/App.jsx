@@ -1,7 +1,11 @@
 
 import './App.css'
+
 import FirstPage from './components/firstPage/FirstPage'
 import Freelancer from './components/freelancerPage/Freelancer'
+
+
+import Home from "./components/Home"
 
 function App() {
   let jobList = [{title:"title", description:"desc iufebbfuwBOFBJKA JK FAJBGJABFOINFOAEBJFABBAEJBFEAJJBEAIBAIEBAFJBFJIBJ SABFJABJAEBJAFBJBFJBFBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", price:"150"},
@@ -13,6 +17,7 @@ function App() {
 
   return (
     <>
+
       {/* <FirstPage /> */}
       <Freelancer jobList={jobList} />
     </>
