@@ -1,13 +1,15 @@
-
+import { useEffect, useState } from 'react';
 import './App.css'
 
 import FirstPage from './components/firstPage/FirstPage'
 import Freelancer from './components/freelancerPage/Freelancer'
 
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home"
+import ConnectPage from './components/Connection/ConnectPage';
 
 function App() {
+
   let jobList = [{title:"title", description:"desc iufebbfuwBOFBJKA JK FAJBGJABFOINFOAEBJFABBAEJBFEAJJBEAIBAIEBAFJBFJIBJ SABFJABJAEBJAFBJBFJBFBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", price:"150"},
   {title:"title", description:"desc iufebbfuwBOFBJKA JK FAJBGJABFOINFOAEBJFABBAEJBFEAJJBEAIBAIEBAFJBFJIBJ SABFJABJAEBJAFBJBFJBFBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", price:"150"},
   {title:"title", description:"desc iufebbfuwBOFBJKA JK FAJBGJABFOINFOAEBJFABBAEJBFEAJJBEAIBAIEBAFJBFJIBJ SABFJABJAEBJAFBJBFJBFBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", price:"150"},
@@ -19,9 +21,35 @@ function App() {
     <>
 
       {/* <FirstPage /> */}
-      <Freelancer jobList={jobList} />
+      
+
+  const [isfreelancer, setFreelancer] = useState(false);
+
+  useEffect(() => {
+    console.log(isfreelancer);
+  }, [isfreelancer]);
+
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<FirstPage setFreelancer={setFreelancer} />}
+          />
+          <Route
+            path="/freelancerConnect"
+            element={<ConnectPage />}
+          />
+          <Route
+            path="/freelancer"
+            element={<Freelancer/>}
+          />
+        </Routes>
+      </Router>
+
     </>
   )
 }
 
-export default App
+export default App;
