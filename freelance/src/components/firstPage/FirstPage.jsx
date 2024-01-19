@@ -1,7 +1,9 @@
 import React from 'react'
 import './FirstPage.css'
+import { Link } from 'react-router-dom';
 
-function FirstPage() {
+function FirstPage(props) {
+
   return (
     <div className='page' >
         <div className="logo">DeLancer</div>
@@ -13,10 +15,11 @@ function FirstPage() {
         <div className="right">
             <div className="box">
                 <div className="upper">
-                    <div className="text">Looking for a Freelancer</div>
+                    <div className="text" onClick={() => { props.setFreelancer(false)}}> <span>Looking for a Freelancer</span> </div>
                 </div>
                 <div className="lower">
-                    <div className="text">I'm a Freelancer</div>
+                <Link to="/freelancerConnect" className="text" onClick={() => {props.setFreelancer(true)}}> <span> I&apos;m a Freelancer</span></Link>
+
                 </div>
             </div>
         </div>
