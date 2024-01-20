@@ -30,7 +30,7 @@ function App() {
         <Routes>
 
         <Route  path="/" element={<FirstPage setFreelancer={setFreelancer} />} />
-        <Route  path="/freelancer" element={<Freelancer jobList={jobList} />} />
+        <Route  path="/freelancerConnect" element={<ConnectPage jobList={jobList}></ConnectPage>} />
         <Route path="/freelancer/job/:id" element={<Jobdes jobList={jobList}></Jobdes>} />
 
 
