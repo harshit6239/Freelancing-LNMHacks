@@ -5,7 +5,10 @@ import FirstPage from './components/firstPage/FirstPage';
 import Freelancer from './components/freelancerPage/Freelancer';
 import Home from './components/Home';
 import ConnectPage from './components/Connection/ConnectPage';
-import Jobdes from './components/JobDes/jobdes';
+
+import Jobdes from './components/JobDesPage/Jobdes';
+
+
 function App() {
   // Assuming jobList is an array of job objects
 
@@ -36,7 +39,11 @@ function App() {
 
 
         </Routes>
+
+      </Router> 
+
       </Router>
+
     </>
   );
 }
