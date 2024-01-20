@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Freelancer.css'
 import jobdes from '../JobDes/jobdes';
 
