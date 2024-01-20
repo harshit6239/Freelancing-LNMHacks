@@ -1,5 +1,6 @@
 
 import './Freelancer.css'
+import jobdes from '../JobDes/jobdes';
 import { Link } from 'react-router-dom';
 
 function Freelancer(props) {
@@ -17,7 +18,7 @@ function Freelancer(props) {
                 </div>
                 <div className="jobList">
                     {props.jobList.map((job) => (
-                        <Link to={`/Job/${job.id}`} className="job" key={job.id}>
+                        <Link  to={`/freelancer/job/${job.id}`} className="job" key={job.id}>
                             <div className="description">
                                 <div className="jobTitle">{job.title}</div>
                                 <p className="jobDescription">{job.description}</p>

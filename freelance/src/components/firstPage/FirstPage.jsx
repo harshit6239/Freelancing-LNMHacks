@@ -14,7 +14,6 @@ function FirstPage(props) {
         </div>
         <div className="right">
             <div className="box">
-
                 <div className="upper">
                     <Link to="/" className="text" onClick={() => { props.setFreelancer(false)}}> <span>Looking for a Freelancer</span> </Link>
                 </div>
@@ -22,7 +21,6 @@ function FirstPage(props) {
                 <Link to="/freelancerConnect" className="text" onClick={() => {props.setFreelancer(true)}}> <span> I&apos;m a Freelancer</span></Link>
 
                 </div>
-
             </div>
         </div>
     </div>
