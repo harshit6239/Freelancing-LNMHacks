@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function FirstPage(props) {
 
   return (
-    <div className='page' >
+    <div className='firstpage' >
         <div className="logo">DeLancer</div>
         <div className="left">
             <div className="text">

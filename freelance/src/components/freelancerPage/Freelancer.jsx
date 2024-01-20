@@ -1,12 +1,12 @@
 
 import './Freelancer.css'
 import jobdes from '../JobDes/jobdes';
+import { Link } from 'react-router-dom';
 
 function Freelancer(props) {
 
     return (
-        <div className='page'>
-            {/* <img src="/background.png" alt="" className="background" /> */}
+        <div className='freelancer_page'>
             <div className="logo">DeLancer</div>
             <div className="profile">
                 <img src="" alt="" />
@@ -18,7 +18,7 @@ function Freelancer(props) {
                 </div>
                 <div className="jobList">
                     {props.jobList.map((job) => (
-                        <div className="job" key={job.id}>
+                        <Link  to={`/freelancer/job/${job.id}`} className="job" key={job.id}>
                             <div className="description">
                                 <div className="jobTitle">{job.title}</div>
                                 <p className="jobDescription">{job.description}</p>
@@ -26,7 +26,7 @@ function Freelancer(props) {
                             <div className="price">
                                 <div className="jobPrice">${job.price}</div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
