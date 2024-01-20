@@ -1,5 +1,7 @@
+
+import "./ConnectPage.css"
 import { useEffect, useState } from "react";
-import "./connect.css";
+
 import {ethers} from 'ethers'
 import Freelancer from "../freelancerPage/Freelancer";
 function ConnectPage(props) {
@@ -35,6 +37,7 @@ function ConnectPage(props) {
     };
     checkConnection();
 }, []); 
+
 
   return (
     <>
