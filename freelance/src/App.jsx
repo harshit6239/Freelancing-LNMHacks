@@ -6,7 +6,7 @@ import Freelancer from './components/freelancerPage/Freelancer';
 import Home from './components/Home';
 import ConnectPage from './components/Connection/ConnectPage';
 
-import Jobdes from './components/JobDesPage/Jobdes';
+import Jobdes from './components/JobDes/jobdes';
 
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
 
       </Router> 
 
-      </Router>
+    
 
     </>
   );

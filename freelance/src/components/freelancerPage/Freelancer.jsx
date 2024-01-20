@@ -1,6 +1,6 @@
 
 import './Freelancer.css'
-import jobdes from '../JobDes/jobdes';
+
 import { Link } from 'react-router-dom';
 
 function Freelancer(props) {
