@@ -14,10 +14,10 @@ function FirstPage(props) {
         </div>
         <div className="right">
             <div className="box">
-                <Link className="upper" onClick={() => { props.setFreelancer(false)}}>
+                <Link className="upper" to="/client" onClick={() => { props.setFreelancer(false)}}>
                     <span>Looking for a Freelancer</span>
                 </Link>
-                <Link className="lower" to="/freelancer" onClick={() => {props.setFreelancer(true)}}>
+                <Link className="lower" to="/findJobs" onClick={() => {props.setFreelancer(true)}}>
                      <span> I&apos;m a Freelancer</span>
                 </Link>
             </div>

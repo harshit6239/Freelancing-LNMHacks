@@ -1,4 +1,4 @@
-import "./connect.css"
+import "./ConnectPage.css"
 
 function ConnectPage() {
   return (
