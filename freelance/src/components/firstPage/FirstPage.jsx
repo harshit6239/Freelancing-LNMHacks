@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function FirstPage(props) {
 
   return (
-    <div className='page' >
+    <div className='firstpage' >
         <div className="logo">DeLancer</div>
         <div className="left">
             <div className="text">
@@ -14,13 +14,12 @@ function FirstPage(props) {
         </div>
         <div className="right">
             <div className="box">
-                <div className="upper">
-                    <div className="text" onClick={() => { props.setFreelancer(false)}}> <span>Looking for a Freelancer</span> </div>
-                </div>
-                <div className="lower">
-                <Link to="/freelancerConnect" className="text" onClick={() => {props.setFreelancer(true)}}> <span> I&apos;m a Freelancer</span></Link>
-
-                </div>
+                <Link className="upper" onClick={() => { props.setFreelancer(false)}}>
+                    <span>Looking for a Freelancer</span>
+                </Link>
+                <Link className="lower" to="/freelancer" onClick={() => {props.setFreelancer(true)}}>
+                     <span> I&apos;m a Freelancer</span>
+                </Link>
             </div>
         </div>
     </div>
